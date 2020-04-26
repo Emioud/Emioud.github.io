@@ -1,0 +1,636 @@
+/*
+Made with love, a lot of coffee, and Amira's support by Mahmoud Radwan.
+*/
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+@font-face {
+    font-family: 'proxima_novathin';
+    src: url('fontsfree-net-proxima-nova-thin.woff2') format('woff2'),
+         url('fontsfree-net-proxima-nova-thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'bodoniflfbold';
+  src: url('bodoniflf-bold-webfont.woff2') format('woff2'),
+       url('bodoniflf-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'bodoniflfregular';
+  src: url('bodoniflf-roman-webfont.woff2') format('woff2'),
+       url('bodoniflf-roman-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'freightdisp_black';
+  src: url('freight_disp_black-webfont.woff2') format('woff2'),
+       url('freight_disp_black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'proximanova-mediuuploadedfile';
+  src: url('fontsfree-net-pr10-webfont.woff2') format('woff2'),
+       url('fontsfree-net-pr10-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+body {
+  overflow-x: hidden;   
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+  background-color: black;
+  transition: 0.6;
+  transition: max-height 1s;  
+
+}
+
+header.sticky{
+  height: 50px;
+  transition: all 0.6s;
+}
+
+
+
+.logo {
+  cursor: pointer;
+}
+
+.nav__links a,
+.cta{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #edf0f1;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #0088a9;
+}
+
+.cta {
+  padding: 9px 25px;
+  background-color: rgb(107, 107, 107);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.3s ease 0s;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta,
+  .personalpic{
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
+
+
+.logo{
+  height: 45px;
+  font-family: bodoniflfregular;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 1000;
+  border-style: solid;
+  border-color: #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2.5px;
+  user-select: none;
+  transition: all 0.3s ease 0s;
+}
+
+
+li:hover{
+  color: rgb(131, 131, 131);
+}
+
+
+
+.logo:hover{
+  color: rgb(131, 131, 131);
+  border-color: rgb(131, 131, 131);;
+}
+
+
+body{
+  margin: 0;
+  background-color: black;
+  padding: 0%;
+}
+.personalpic {
+  width: 256px;
+  border-radius: 50%;
+  float: right;
+  margin-top: 180px;
+  margin-right: 50px;
+}
+
+.personalpic:hover{
+  box-shadow: 1px 0px 35px 0px rgba(255,255,255,1);
+}
+
+.description{
+  color: #fff;
+  font-family: proximanova-mediuuploadedfile;
+  margin-left: 90px;
+  font-weight: 500;
+  background: rgb(107, 107, 107);
+  display: inline-block;
+  font-size: 25px;
+  width: 62.5%;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+
+
+.me{
+  font-family: freightdisp_black;
+  color: #fff;
+  font-size: 70px;
+  font-weight: 1000;
+  display: inline-block;
+  margin-top: 200px;
+  margin-left: 85px;
+  
+}
+
+.hrfirst{
+  width: 150px;
+  border-top: 2.5px solid white;
+  margin-left: 90px;
+  display: block;
+}
+
+.hire{
+  border: 1px solid #FFFFFF; 
+  border-top: solid;
+  padding: 10px;
+  margin-right: 15px;
+  border-radius: 50px;
+}
+
+.fa-facebook-square{
+  color: #fff;
+  left: 0;
+  margin-left: 25px;
+}
+
+
+.fa-twitter-square{
+  color: #fff;
+  left: 0;
+  margin-left: 25px;
+  border-radius: 50px;
+}
+
+.fa-github-square{
+  color: #fff;
+  left: 0;
+  margin-left: 25px;
+  border-radius: 50px;
+}
+
+.fa-hover:hover{
+  color: rgb(131, 131, 131);
+}
+
+
+.readmore{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #edf0f1;
+  text-decoration: none; 
+  text-align: center;
+  font-size: 26px;
+  margin-top: 15px;
+  display: block;
+}
+
+
+.arrow{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.arrow span{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid #fff;
+  border-right: 5px solid #fff;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+  }
+}
+
+.personalpic2{
+  display: none;
+}
+
+.secondDevHead {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 38px;
+  text-transform: uppercase; 
+  margin-left: 50px;
+  margin-top: 100px;
+  display: inline-block;
+  letter-spacing: 5px;
+}
+
+.aboutme{
+  color: #FFFFFF;
+  width: 85%;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 50px;
+  margin-top: 80px;
+  font-size: 16px;
+  display: block;
+}
+
+.softwaredevelopment{
+  color: #fff;
+  font-family: 'proxima_novathin', sans-serif;
+  font-size: 21.5px;
+  font-weight: 800;
+  padding-left: 60px;
+  margin-top: 150px;
+  display: inline-block;
+}
+
+.softwaredevelopmentdisc{
+  color: #fff;
+  margin-left: 115px;
+  margin-top: -7px;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  display: inline-block;
+}
+
+
+.arrow2{
+  position: absolute;
+  top: 190%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.arrow2 span{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid #fff;
+  border-right: 5px solid #fff;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+  }
+}
+@media only screen and (max-width: 800px){ 
+/*
+  .hrfirst{
+    margin-left: 35px;
+  }
+
+  .description{
+    margin-left: 35px;
+  }*/
+
+  .softwaredevelopment{
+    margin-top: 30px;
+  }
+
+  .softwaredevelopmentdisc{
+    margin-bottom: 30px;
+    margin-left: 50px;
+  }
+  .aboutme{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fa-facebook-square{
+    position: absolute;
+    top: 40% !important;
+  }
+
+  .fa-twitter-square{
+    position: absolute;
+    top: 45% !important;
+  }
+
+  .fa-github-square{
+    position: absolute;
+    top: 50% !important;
+  }
+
+
+.readmore{
+  position: absolute;
+  top: 100%;
+  text-align: center;
+  right: 50%;
+  margin-right: -70px;
+}
+
+  .personalpic{
+    display: none;
+    display: hide;
+  }
+  
+  .personalpic2{
+  display: block;
+  width: 256px;
+  border-radius: 50%;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  
+  }
+
+
+  .me{
+    font-size: 35px;
+    margin-top: 100px;
+    margin-left: 85px;
+
+  }
+
+
+
+ .logo{
+    text-align: center;
+    display: block;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;  
+  
+ } 
+
+ .nav{
+   display: none;
+   
+ }
+  .fa-facebook-square{
+    margin-top: none;
+  }
+
+  
+  .readmore{
+    display: none;
+  }
+ }
+
+
+@media only screen and (min-width: 800px) and (max-width:1090px) {
+  .softwaredevelopment{
+    margin-top: 30px;
+  }
+
+  .softwaredevelopmentdisc{
+    margin-bottom: 30px;
+    margin-left: 50px;
+  }
+  .aboutme{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .personalpic{
+    display: none;
+  }
+
+  .readmore{
+    display: none;
+  }
+
+  .me{
+    margin-top: 120px;
+  }
+  .personalpic2{
+    display: block;
+    width: 256px;
+    border-radius: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 25px;
+    }
+}
+
+@media only screen and (min-height: 900px){
+  .me{
+    position: absolute;
+    top: 33%;  
+    margin-top: 0px;
+    -ms-transform: translateY(-33%);
+    transform: translateY(-33%);
+  
+  }
+
+  .hrfirst{
+    position: absolute;
+    top: 42%;  
+    margin-top: 0px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);  
+  }
+
+  .description{
+    position: absolute;
+    top: 45%;  
+    margin-top: 0px;
+    -ms-transform: translateY(-52%);
+    transform: translateY(-52%);
+  
+  }
+  .personalpic2{
+    position: absolute;
+    top: 60%;  
+    right: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    margin-top: 0px;
+    -ms-transform: translateY(-60%);
+    transform: translateY(-60%);
+  
+  }
+}
+
+@media only screen and (max-height: 730px) and (max-width:490px){
+  .personalpic2{
+    width: 220px;
+    margin-top: 15px;
+  }
+
+  .me{
+    margin-top: 70px;
+  }
+
+  .logo{
+    margin-top: -15px;
+  }
+}
+
+@media only screen and (min-width:1080px){
+  .readmore{
+    margin-top: 130px;
+  }
+}
